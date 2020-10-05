@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       home: new RandomWords(),
       theme: new ThemeData(
         primaryColor: Colors.black,
-        textTheme: TextTheme(bodyText2: TextStyle(color: Colors.purple)),
+        textTheme: TextTheme(bodyText2: TextStyle(color: Colors.green)),
       ),
     );
   }

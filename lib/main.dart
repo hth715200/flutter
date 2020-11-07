@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
-void main() => runApp(new MyApp());
+
+// void main() => runApp(new Test());
 
 class MyApp extends StatelessWidget {
   @override
@@ -98,15 +99,16 @@ class RandomWordsState extends State<RandomWords> {
             _saved.add(pair);
           }
         });
-      },//onTap
+      }, //onTap
     );
   }
+
   void _pushSaved() {
     Navigator.of(context).push(
       new MaterialPageRoute(
         builder: (context) {
           final tiles = _saved.map(
-                (pair) {
+            (pair) {
               return new ListTile(
                 title: new Text(
                   pair.asPascalCase,
@@ -115,12 +117,10 @@ class RandomWordsState extends State<RandomWords> {
               );
             },
           );
-          final divided = ListTile
-              .divideTiles(
+          final divided = ListTile.divideTiles(
             context: context,
             tiles: tiles,
-          )
-              .toList();
+          ).toList();
           return new Scaffold(
             appBar: new AppBar(
               title: new Text('Saved Suggestions'),
@@ -131,6 +131,4 @@ class RandomWordsState extends State<RandomWords> {
       ),
     );
   }
-
 }
-
